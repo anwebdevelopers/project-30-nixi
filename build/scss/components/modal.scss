@@ -1,0 +1,199 @@
+.modal {
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    display: none;
+}
+.modal-show {
+	overflow-y: auto;
+	display: block;
+}
+
+.modal__box {
+	position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+    width: 100%;
+    max-width: 420px;
+    background-color: #252525;
+    color: #fff;
+    padding: 150px 38px 100px;
+    transform: translate(100%, 0);
+    transition: transform .3s ease-out;
+}
+.modal__box-show {
+	transform: translate(0, 0);
+}
+.modal__button {
+	position: absolute;
+    top: 40px;
+    right: 40px;
+   
+	button {
+		@include btn;
+		position: relative;
+		width: 18px;
+		height: 18px;
+		
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			transition: all .8s ease;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 212.982 212.982'%3E%3Cg id='Close'%3E%3Cpath style='fill-rule:evenodd;clip-rule:evenodd;' d='M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312 c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312 l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937 c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+		}
+		&:after {
+			opacity: 0;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 212.982 212.982'%3E%3Cg id='Close'%3E%3Cpath style='fill-rule:evenodd;clip-rule:evenodd;' d='M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312 c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312 l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937 c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z' fill='%2351D499'/%3E%3C/g%3E%3C/svg%3E");
+		}
+		&:hover, &:active, &:focus {
+			&:before {
+				opacity: 0;
+			}
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.modal__title {
+	font-family: 'Bebas Neue';
+    font-size: 81px;
+    line-height: 1;
+    color: #fff;
+}
+.modal__form {
+	margin: 30px 0 0 0;
+}
+.modal__form-item {
+	display: block;
+	margin: 20px 0 0 0;
+	font-size: 16px;
+	span {
+		display: block;
+		color: #fff;
+	}
+	input {
+		display: block;
+		height: 50px;
+		width: 100%;
+		margin: 15px 0 0 0;
+		padding: 0 16px;
+		font-size: 18px;
+		line-height: 50px;
+		background-color: #fff;
+		border: 2px solid transparent;
+		outline: none;
+		box-shadow: none;
+	    color: #000;
+	    border-radius: 0;
+	    transition: all .8s ease;
+	    &:focus {
+			border: 2px solid $main-color;
+	    }
+	}
+	input.error, input.error:focus {
+		background-color: #fdd4d4;
+		border: 2px solid #fd7979;
+	}
+	input.valid, input.valid:focus {
+		background-color: #ebfdea;
+		border: 2px solid $main-color;
+	}
+}
+.modal__form-submit {
+	margin: 40px 0 0 0;
+	button {
+		@include btn;
+		position: relative;
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding: 12px 50px 12px 20px;
+		border: 2px solid $main-color;
+		font-size: 18px;
+
+		text-decoration: none;
+		color: #fff;
+		box-shadow: inset 0 0 0 0 $main-color;
+		transition: all .5s ease;
+		&:after,
+		&:before {
+			content: '';
+			position: absolute;
+			right: 20px;
+			top: 22px;
+			width: 22px;
+			height: 16px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.91 15.94'%3E%3Cg%3E%3Cg%3E%3Cpath d='M6.88,15.94,21.91,0,0,.1,4.85,5.64,16.63,2.29,6.2,8.57Z' style='fill:%2351d499'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+			color: $main-color;
+			transition: all .8s ease;
+		}
+		&:before {
+			opacity: 0;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.91 15.94'%3E%3Cg%3E%3Cg%3E%3Cpath d='M6.88,15.94,21.91,0,0,.1,4.85,5.64,16.63,2.29,6.2,8.57Z' style='fill:%23323B47'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+		}
+		
+		&:hover, &:active, &:focus {
+			color: #323B47;
+			box-shadow: inset 1000px 0 0 0 $main-color;
+			&:after {
+				opacity: 0;
+			}
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.modal__box {
+	    padding: 120px 38px 80px;
+	}
+	.modal__title {
+	    font-size: 71px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.modal__title {
+	    font-size: 61px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.modal__box {
+	    padding: 100px 28px 60px;
+	}
+	.modal__title {
+	    font-size: 51px;
+	}
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

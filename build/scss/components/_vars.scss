@@ -1,0 +1,19 @@
+@import "bourbon";
+
+$main-color: #51D499;
+$accent-color: #ffcc00;
+$ieSprite: '.lt-ie9' !default;
+$sprite: map-get($icons, sprite) !default;
+$mq-base-font-size: 16px !default;
+
+@mixin btn {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}

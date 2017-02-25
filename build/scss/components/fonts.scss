@@ -1,0 +1,21 @@
+@import "bourbon";
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeueBold.eot');
+	src: url('../fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeueBold.woff') format('woff'),
+		url('../fonts/BebasNeueBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/RobotoRegular.eot');
+	src: url('../fonts/RobotoRegular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RobotoRegular.woff') format('woff'),
+		url('../fonts/RobotoRegular.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

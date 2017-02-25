@@ -1,0 +1,112 @@
+.contacts {
+	position: relative;
+	padding: 170px 0 170px 0;
+}
+.contacts__wrapper {
+	@extend .container;
+}
+.contacts__box {
+	max-width: 50%;
+	padding: 0 0 0 70px;
+}
+.contacts__item {
+	position: relative;
+	padding: 0 0 0 50px;
+	margin: 0 0 50px 0;
+}
+.contacts__item:last-child {
+	margin: 0;
+}
+.contacts__item-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contacts__item-title {
+	font-size: 40px;
+	font-family: 'Bebas Neue';
+	line-height: 1;
+}
+.contacts__item-adress {
+	margin: 15px 0 0 0;
+	font-size: 20px;
+}
+.contacts__item-mail {
+	font-size: 20px;
+	a  {
+		text-decoration: none;
+		color: $main-color;
+		transition: all .8s ease;
+		border-bottom: 1px solid transparent;
+		&:hover, &:active, &:focus {
+			border-bottom: 1px solid $main-color;
+		}
+	}
+}
+.contacts__item-phone {
+	font-size: 20px;
+	a  {
+		text-decoration: none;
+		color: #323B47;
+		transition: all .8s ease;
+		border-bottom: 1px solid transparent;
+		&:hover, &:active, &:focus {
+			border-bottom: 1px solid $main-color;
+		}
+	}
+}
+.contacts__map {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.contacts__box {
+	    padding: 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.contacts {
+	    padding: 460px 0 60px 0;
+	}
+	.contacts__box {
+	   max-width: 100%;
+	}
+	.contacts__map {
+		height: 400px;
+	    top: 0;
+	    right: 0;
+	    bottom: auto;
+	    left: 0;
+	}
+	.contacts__item {
+		padding: 0;
+		text-align: center;
+	}
+	.contacts__item-icon {
+		position: static;
+	}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

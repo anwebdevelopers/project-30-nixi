@@ -1,0 +1,167 @@
+.advantages {
+	padding: 120px 0 110px 0;
+	background-color: #E9F2ED;
+}
+
+.advantages__wrapper {
+	@extend .container;
+
+}
+.advantages__title {
+	font-family: 'Bebas Neue';
+	text-align: center;
+	h2 {
+		margin: 0;
+		font-size: 65px;
+		line-height: 1;
+	}
+}
+.advantages__box {
+	margin: 60px 0 0 0;
+	text-align: center;
+	font-size: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+.advantages__item {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	padding: 0 10px;
+	transition: all .8s ease;
+	&:after {
+	    content: '';
+	    position: absolute;
+	    top: 30px;
+	    left: 75%;
+	    width: 50%;
+	    height: 2px;
+	    background-color: #323B47;
+	}
+	&:hover, &:active {
+		.advantages__item-number {
+			transform: scale(1.2);
+		}
+		.advantages__item-icon {
+			i {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+.advantages__item:last-child {
+	&:after {
+		display: none;
+	}
+}
+.advantages__item:nth-child(2) {
+	animation-delay: .5s;
+}
+.advantages__item:nth-child(3) {
+	animation-delay: 1s;
+}
+.advantages__item:nth-child(4) {
+	animation-delay: 1.5s;
+}
+.advantages__item-number {
+	display: inline-block;
+	vertical-align: top;
+	width: 60px;
+	height: 60px;
+	line-height: 65px;
+	background-color: $main-color;
+	font-size: 39px;
+	font-family: 'Bebas Neue';
+	border-radius: 50%;
+	text-align: center;
+	transition: all .8s ease;
+}
+
+.advantages__item-icon {
+	margin: 60px 0 0 0;
+	font-size: 16px;
+	i {
+		transition: all .8s ease;
+	}
+}
+.icon-pan {
+	@include sprite(icon-advantages-1);
+}
+.icon-tablet {
+	@include sprite(icon-advantages-2);
+}
+.icon-brush {
+	@include sprite(icon-advantages-3);
+}
+.icon-clock {
+	@include sprite(icon-advantages-4);
+}
+.advantages__item-title {
+	margin: 10px 0 0 0;
+	font-size: 21px;
+}
+.advantages__item-text {
+	margin: 5px 0 0 0;
+	font-size: 15px;
+	color: #4D4D4D;
+}
+.advantages__button {
+	margin: 80px 0 0 0;
+	text-align: center;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.advantages__title h2 {
+	    font-size: 55px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.advantages__title h2 {
+	    font-size: 45px;
+	}
+	.advantages__item {
+		width: 50%;
+		margin: 0 0 50px 0;
+	}
+	.advantages__item:nth-child(even) {
+		&:after {
+			display: none;
+		}
+	}
+	.advantages__item-icon {
+   		margin: 30px 0 0;
+   	}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.advantages {
+	    padding: 60px 0 60px;
+	}
+	.advantages__box {
+		display: block;
+	}
+	.advantages__item {
+		display: block;
+		width: auto;
+		&:after {
+			display: none;
+		}
+	}
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}

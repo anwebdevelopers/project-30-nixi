@@ -1,0 +1,262 @@
+// CATALOG STYLES
+
+.catalog {
+	padding: 0 0 60px 0;
+	background-color: #444D5B;
+}
+.catalog__wrapper {
+	@extend .container;
+}
+.catalog__links {
+	padding: 25px 0;
+	background-color: #323B47;
+	text-align: center;
+	animation-delay: 1.5s;
+	ul {
+		
+		list-style: none;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 40px;
+			a {
+				text-decoration: none;
+				color: #fff;
+				transition: all .8s ease;
+				&:hover, &:active, &:focus {
+					color: $main-color;
+				}
+			}
+			.active {
+				color: $main-color;
+			}
+		}
+	}
+}
+.catalog__links-wrapper {
+	@extend .container;
+	a {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 40px;
+		text-decoration: none;
+		color: #fff;
+		transition: all .8s ease;
+		&:hover, &:active, &:focus {
+			color: $main-color;
+		}
+	}
+	.active {
+		color: $main-color;
+	}
+}
+.catalog__box {
+	margin: 35px 0 0 0;
+	font-size: 0;
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 1000px;
+}
+.catalog__item {
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+	margin: 0 0 55px 0;
+	&:hover, &:active, &:focus {
+		.catalog__item-img {
+			img {
+				transform: scale(1.1);
+				filter: saturate(2) brightness(1.1);
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+	}
+}
+.catalog__item:nth-child(odd) {
+	margin-right: 4%;
+}
+.catalog__item:nth-child(even) {
+	animation-delay: .3s;
+}
+.catalog__item-img {
+	overflow: hidden;
+	img {
+		max-width: 100%;
+		width: auto;
+		height: auto;
+		transition: all .8s ease;
+	}
+}
+.catalog__item-title {
+	margin: 25px 0 0 0;
+	color: #fff;
+	h3 {
+		margin: 0;
+		font-size: 23px;
+	}
+}
+.catalog__item-text {
+	margin: 5px 0 0 0;
+	font-size: 15px;
+	color: #ccc;
+	p {
+		margin: 0;
+	}
+}
+
+.catalog__item-box {
+	@extend .clearfix;
+	margin: 20px 0 0 0;
+	padding: 20px 0 0 0;
+	border-top: 1px solid #5C687A;
+}
+.catalog__item-date {
+	float: right;
+	margin: 15px 0 0 0;
+	font-size: 14px;
+	color: $main-color;
+}
+.catalog__item-price {
+	float: left;
+	font-size: 33px;
+	color: $main-color;
+}
+.catalog__item-discount {
+	float: left;
+	margin: 12px 0 0 30px;
+	padding: 1px 6px;
+	font-size: 16px;
+	color: $main-color;
+	border: 1px solid $main-color;
+}
+.catalog__item-priceold {
+	float: left;
+	margin: 8px 0 0 15px;
+	font-size: 21px;
+	color: #fff;
+	span {
+		position: relative;
+		padding: 0 5px;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 13px;
+			left: 0;
+			right: 0;
+			background-color: $main-color;
+			height: 2px;
+		}
+	}
+}
+.catalog__item-button {
+	margin: 20px 0 0 0;
+	a {
+		position: relative;
+		display: block;
+		padding: 16px 50px 16px 20px;
+		font-size: 16px;
+		text-decoration: none;
+		color: #fff;
+		background-color: #4E5868;
+		box-shadow: inset 0 0 0 0 $main-color;
+		transition: all .5s ease;
+		&:after {
+			content: '';
+			position: absolute;
+			right: 20px;
+			top: 22px;
+			width: 22px;
+			height: 16px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.91 15.94'%3E%3Cg%3E%3Cg%3E%3Cpath d='M6.88,15.94,21.91,0,0,.1,4.85,5.64,16.63,2.29,6.2,8.57Z' style='fill:%2351d499'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+			color: $main-color;
+			transition: all .8s ease;
+		}
+		
+		&:hover, &:active, &:focus {
+			color: #323B47;
+			box-shadow: inset 1000px 0 0 0 $main-color;
+			&:after {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.91 15.94'%3E%3Cg%3E%3Cg%3E%3Cpath d='M6.88,15.94,21.91,0,0,.1,4.85,5.64,16.63,2.29,6.2,8.57Z' style='fill:%23323B47'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+			}
+		}
+	}
+}
+.catalog__item_different {
+	background-color: #323B47;
+}
+.catalog__item-different-content {
+	padding: 50px 10%;
+	font-size: 24px;
+	color: #fff;
+
+	p {
+		margin: 0;
+		a {
+			text-decoration: none;
+			color: $main-color;
+			transition: all .8s ease;
+			border-bottom: 1px solid transparent;
+			&:hover, &:active, &:focus {
+				border-bottom: 1px solid $main-color;
+			}
+		}
+	}
+}
+
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.catalog__item-discount {
+		clear: left;
+		margin: 12px 0 0 0;
+	}
+	.catalog__links-wrapper a {
+	    padding: 0 20px;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.catalog__links-wrapper a {
+	    padding: 5px 10px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.catalog__item-date {
+		float: none;
+		margin: 0;
+	}
+	.catalog__item-different-content {
+	    padding: 30px 10%;
+	    font-size: 20px;
+	}
+}
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.catalog {
+		padding: 0 0 30px 0;
+	}
+	.catalog__box {
+		display: block;
+	}
+	.catalog__item {
+		display: block;
+	    width: auto;
+	    margin: 0 0 55px;
+	}
+	.catalog__item:nth-child(odd) {
+		margin-right: 0;
+	}
+}
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	/**/
+}
